@@ -31,12 +31,12 @@ class DoomEnv(object):
 
         # Load a config file
         game.load_config(os.path.join(
-            vizdoom_dir, "examples", 'config', scenario + '.cfg'))
+            vizdoom_dir, "scenarios", scenario + '.cfg'))
 
         # Replace default relative paths with actual paths
         game.set_vizdoom_path(os.path.join(vizdoom_dir, "bin/vizdoom"))
-        game.set_doom_game_path(
-            os.path.join(vizdoom_dir, 'scenarios/freedoom2.wad'))
+        #game.set_doom_game_path(
+        #    os.path.join(vizdoom_dir, 'scenarios/freedoom2.wad'))
         game.set_doom_scenario_path(
             os.path.join(vizdoom_dir, 'scenarios', scenario + '.wad'))
 

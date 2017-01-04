@@ -19,7 +19,7 @@ import doom_env
 
 
 def phi(obs):
-    resized = cv2.resize(obs.image_buffer, (84, 84))
+    resized = cv2.resize(obs.screen_buffer, (84, 84))
     return resized.transpose(2, 0, 1).astype(np.float32) / 255
 
 
